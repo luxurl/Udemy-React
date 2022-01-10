@@ -28,7 +28,7 @@ const App = () => {
   if (num % 3 === 0) {
     faceShowFlag || setFaceShowFlag(true);
   } else {
-    setFaceShowFlag(false);
+    faceShowFlag && setFaceShowFlag(false);
   }
 
   return (
