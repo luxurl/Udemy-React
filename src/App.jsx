@@ -26,7 +26,7 @@ const App = () => {
 
   //numが3の倍数のときに顔文字を表示
   if (num % 3 === 0) {
-    setFaceShowFlag(true);
+    faceShowFlag || setFaceShowFlag(true);
   } else {
     setFaceShowFlag(false);
   }
