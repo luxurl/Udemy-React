@@ -5,7 +5,9 @@ import ColofulMessage from "./compornents/ColorFulMessage";
 
 const App = () => {
   //ボタンを押すとカウントアップする処理
-  const onClicButton = () => alert();
+  const onClicCountUp = () => {
+    setNum(num + 1);
+  };
   //ステートの変数名とセッターを分割代入
   const [num, setNum] = useState(0);
   return (
@@ -17,7 +19,7 @@ const App = () => {
       <h1 style={{ color: "red" }}>Hellow</h1>
       <ColofulMessage color="blue">How are you?</ColofulMessage>
       <ColofulMessage color="pink">I'm fine</ColofulMessage>
-      <button onClick={onClicButton}>botton</button>
+      <button onClick={onClicCountUp}>botton</button>
       <p>{num}</p>
     </>
     //   </React.Fragment>
