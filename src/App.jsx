@@ -24,6 +24,13 @@ const App = () => {
     setFaceShowFlag(!faceShowFlag);
   };
 
+  //numが3の倍数のときに顔文字を表示
+  if (num % 3 === 0) {
+    setFaceShowFlag(true);
+  } else {
+    setFaceShowFlag(false);
+  }
+
   return (
     //エラーを回避するためだけの囲い
     //    <React.Fragment>
