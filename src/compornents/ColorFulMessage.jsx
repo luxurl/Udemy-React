@@ -2,7 +2,6 @@ import React from "react";
 
 const ColorfulMessage = (props) => {
   const { color, children } = props;
-  console.log(props);
 
   const contentStyle = {
     //プロパティと同じ変数名の場合省略可

@@ -1,6 +1,6 @@
 //拡張子jsxはコンポーネントの証
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ColofulMessage from "./compornents/ColorFulMessage";
 
 //再レンダリングをしている
@@ -24,12 +24,16 @@ const App = () => {
     setFaceShowFlag(!faceShowFlag);
   };
 
-  //numが3の倍数のときに顔文字を表示
-  if (num % 3 === 0) {
-    faceShowFlag || setFaceShowFlag(true);
-  } else {
-    faceShowFlag && setFaceShowFlag(false);
-  }
+  //第2引数が[]→最初の一回だけ処理を実行
+  //第2引数が[num]→numが変化したときだけ処理を実行する
+  useEffect(() => {
+    //numが3の倍数のときに顔文字を表示
+    if (num > 0 && num % 3 === 0) {
+      faceShowFlag || setFaceShowFlag(true);
+    } else {
+      faceShowFlag && setFaceShowFlag(false);
+    }
+  }, [num]);
 
   return (
     //エラーを回避するためだけの囲い
