@@ -1,13 +1,10 @@
 //拡張子jsxはコンポーネントの証
 
 import React from "react";
+import ColofulMessage from "./compornents/ColorFulMessage";
 
 const App = () => {
   const onClicButton = () => alert();
-  const contentStyle = {
-    color: "blue",
-    fontSize: "18px"
-  };
 
   return (
     //エラーを回避するためだけの囲い
@@ -15,7 +12,8 @@ const App = () => {
     //省略可
     <>
       <h1 style={{ color: "red" }}>Hellow</h1>
-      <p style={contentStyle}>How are you?</p>
+      <ColofulMessage color="blue">How are you?</ColofulMessage>
+      <ColofulMessage color="pink">I'm fine</ColofulMessage>
       <button onClick={onClicButton}>botton</button>
     </>
     //   </React.Fragment>
