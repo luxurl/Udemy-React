@@ -3,7 +3,14 @@
 import React, { useState } from "react";
 import ColofulMessage from "./compornents/ColorFulMessage";
 
+//再レンダリングをしている
+//App関数の中を頭から実行される
+//propsの値が変わった場合、ステートが変更された場合など
+//大きなプロダクトになると再レンダリングに時間がかかる可能性が出てきたり
+//バグが発生したしたりする
 const App = () => {
+  console.log("最初");
+
   //ステートの変数名とセッターを分割代入
   const [num, setNum] = useState(0);
   const [faceShowFlag, setFaceShowFlag] = useState(false);
